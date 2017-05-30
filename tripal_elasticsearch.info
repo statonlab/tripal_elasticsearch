@@ -1,10 +1,12 @@
-; $Id$
-
 name = Tripal Elasticsearch
-description = This module implements the full-text search engine Elasticsearch and provide site-wide indexing and search for Tripal site.
+description = Provide website-wide indexing and searching. Also provide interface for indexing and searching for any drupal and chado tables.
+package = Elasticsearch
 core = 7.x
-package = Tripal Extensions
-files[] = tripal_elasticsearch.module
 configuration = admin/tripal/extension/tripal_elasticsearch
 
-dependencies[] = libraries
+stylesheets[all][] = css/elastic_search_interface_form.css
+stylesheets[all][] = css/homepage-search-box.css
+
+dependencies[] = views
+dependencies[] = queue_ui:queue_ui
+files[] = tripal_elasticsearch.module
